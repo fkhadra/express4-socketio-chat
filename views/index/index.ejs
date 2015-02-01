@@ -1,0 +1,18 @@
+<%include ../header.ejs%>
+<div class="login">
+	<h1>Work in progress</h1>
+	<form method="post" action="/" id="login">
+		<input type="text" name="login" placeholder="Username" required="required" />
+		<h1>Choose an Avatar</h1>
+		<div class="avatar">
+		<select id="avatar" name="avatar">
+		<% for (i = 0; i < 8; i++) {%>
+			<option data-img-src="<%= avatars[i]%>" value="<%= i%>">
+		<%}%>
+		</select>
+			</div>
+		<!--<input type="password" name="pass" placeholder="Password" required="required" />-->
+		<button type="submit" class="btn btn-primary btn-block btn-large">Let me in !</button>
+	</form>
+</div>
+<%include ../footer.ejs%>
